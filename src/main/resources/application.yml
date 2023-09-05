@@ -26,6 +26,12 @@ spring:
             - Path=/users-service/**
           filters:
             - RewritePath=/users-service,/
+        - id: merchandise
+          uri: lb://merchandise-service
+          predicates:
+            - Path=/merchandise-service/**
+          filters:
+            - RewritePath=/merchandise-service,/
 
 logging:
   level:
